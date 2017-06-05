@@ -12,16 +12,29 @@
     <h1>a Factory of People</h1>
     <section>
 <div>
-<form>
+<form id="personForm">
 <p>
-    <label for="personName"> Name</label>
+    <label for="personName" class = "name"> First Name</label>
  <input type="text" name="personName">
+  <label for="personLastName" class = "name"> Last Name</label>
+ <input type="text" name="personLastName">
     </p> 
+
+    <p>
+<button  type="submit">Go</button>
+
+    </p>
+    <p id="words">words will grow with every submit</p>
 </form>
+
 
 </div>
 
     </section>
+
+
+<script src="index.js"></script>
+<link href="index.css" type="text/css" rel="stylesheet">
 </body>
 
 </html>
