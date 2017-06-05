@@ -1,6 +1,9 @@
 const personForm =document.querySelector('form#personForm')
 //const buttoner=document.querySelector('button#pesonF');
-let g=20;
+const fancy=document.querySelector('#words')
+let g=0;
+let sty=['italic','normal','oblique']
+let fam=['Georgia','Arial','Helvetica','Times New Roman','Verdana']
 function handleSubmit(ev) {
 ev.preventDefault()
 const f=ev.target
@@ -8,9 +11,12 @@ console.log(f.personName.value)
 console.log('SUBMIT')
 const name=f.personName.value+" "+f.personLastName.value
 document.querySelector('h1').textContent=name
-document.querySelector('#words').textContent=name;
-document.querySelector('#words').style.fontSize=g%100+10+'px';
-g=g+19
+document.querySelector('#words').textContent=name
+document.querySelector('#words').style.fontSize=(20*g)%100+10+'px'
+document.querySelector('#words').style.fontStyle=sty[g%3]
+document.querySelector('#words').style.fontFamily=fam[g%5]
+//document.querySelector('#words').style='italic';
+g=g+1
 }
 
 personForm.addEventListener('submit', handleSubmit)
