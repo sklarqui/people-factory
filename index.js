@@ -16,8 +16,12 @@ document.querySelector('#words').style.fontSize=(20*g)%100+10+'px'
 document.querySelector('#words').style.fontStyle=sty[g%3]
 document.querySelector('#words').style.fontFamily=fam[g%5]
 const details=document.querySelector('#details')
-details.innerHTML='<em>'+name+'</em>'
+//details.innerHTML='<em>'+name+'</em>'
+//details.innerHTML =`<em>${name}</em>`
+
 g=g+1
+
+
 }
 
 personForm.addEventListener('submit', handleSubmit)
