@@ -9,3 +9,7 @@ shift comand J
 
 ###Super Mega bonus credit Hyper Fighting
 * Change the apperance of the paragraph (think css) based on a value from the form.
+
+##day 2 Lab
+* add form values to `.details` using `document.createElement` and `appendChild` instead of innerHtml
+* Break out some of this functionality inta a seperate function
