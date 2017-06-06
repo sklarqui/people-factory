@@ -20,7 +20,7 @@ const details=document.querySelector('#details')
 const favoriteColor =f.favoriteColor.value
 const age=f.age.value
 
-const colorDiv=`<div style="background-color: ${favoriteColor}; width: 100px;height:50px;"></div>`
+//const colorDiv=`<div style="background-color: ${favoriteColor}; width: 100px;height:50px;"></div>`
 //details.innerHTML='<em>'+name+'</em>'
 //details.innerHTML =`<em>${name}</em>`
 // ctr / -- will comment out a line
@@ -56,15 +56,15 @@ details.appendChild(ul)
 
 }
 
-function lister(da, ha){
+function lister(list, text){
 const len =document.createElement('li')
-len.textContent=ha
-da.appendChild(len)
+len.textContent=text
+list.appendChild(len)
 }
 function colorLister(list, favC){
 const lPiece =document.createElement('li')
 const colorChoice=document.createElement('div')
-lPiece.textContent='Fav Color: '
+lPiece.textContent='Favorite Color: '
 colorChoice.style.backgroundColor=favC
 colorChoice.style.width='100px'
 colorChoice.style.height='50px'
@@ -72,7 +72,15 @@ lPiece.appendChild(colorChoice)
 
 list.appendChild(lPiece)
 }
+function renderColor(color){//have to use .outerHTML to get value
+   const colorDiv= document.createElement('div')
+   colorDiv.style.backgroundColor=color;
+   colorDiv.style.width='100px'
+   colorDiv.style.height='50px'
+return colorDiv
+//return `<div style="background-color: ${favoriteColor}; width: 100px;height:50px;"></div>`
 
+}
 
 personForm.addEventListener('submit', handleSubmit)
 
