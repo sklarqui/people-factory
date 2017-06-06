@@ -18,7 +18,10 @@ document.querySelector('#words').style.fontFamily=fam[g%5]
 const details=document.querySelector('#details')
 //details.innerHTML='<em>'+name+'</em>'
 //details.innerHTML =`<em>${name}</em>`
-
+// ctr / -- will comment out a line
+const em = document.createElement('em')
+em.textContent=name
+details.appendChild(em)
 g=g+1
 
 

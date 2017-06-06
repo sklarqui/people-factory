@@ -1,7 +1,16 @@
 body {
+    padding: 1rem;/*all or top right bottom left or top and bottom left and right*/
 background-color: green;
 
 }
+
+section > div{
+width: 80%;
+margin: 1rem auto;
+
+
+}
+
 h1{
 color: midnightblue;
 font: Ariel;
