@@ -50,9 +50,18 @@ lister(ul,('name: '+name))
 colorLister(ul,favoriteColor)
 lister(ul,('Age:'+age))
 
-details.appendChild(ul)
+//details.appendChild(ul)
 
 
+const person ={
+    name: f.personName.value, 
+    favoriteColor: renderColor(f.favoriteColor.value).outerHTML, 
+    age:f.age.value,
+}
+
+
+
+details.appendChild(renderList(person))
 
 }
 
@@ -81,6 +90,23 @@ return colorDiv
 //return `<div style="background-color: ${favoriteColor}; width: 100px;height:50px;"></div>`
 
 }
+
+function renderListItem(fieldName, value){
+    const li = document.createElement('li')
+    li.innerHTML=`${fieldName}: ${value}`
+return li
+}
+
+function renderList(personData){
+const list=document.createElement('ul')
+Object.keys(personData).map(function(fieldName){
+const li =renderListItem(fieldName,personData[fieldName])
+list.appendChild(li)
+})
+return list
+}
+
+
 
 personForm.addEventListener('submit', handleSubmit)
 
